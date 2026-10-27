@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Job Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Smart Job Portal</h1>
+        <p>Find Your Dream Job Today!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#jobs">Available Jobs</a>
+        <a href="#apply">Apply for Job</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Smart Job Portal</h2>
+        <p>
+            Find suitable jobs according to your education,
+            qualifications, and skills.
+        </p>
+    </section>
+
+    <!-- Job Search Section -->
+    <section id="jobs">
+        <h2>Available Jobs</h2>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search by job title or skills"
+        >
+
+        <button onclick="searchJobs()">Search Jobs</button>
+
+        <div id="jobList">
+
+            <!-- Job 1 -->
+            <div class="job">
+                <h3>Web Developer</h3>
+                <p>Qualification: B.Tech / Degree</p>
+                <p>Skills: HTML, CSS, JavaScript</p>
+                <p>Location: Hyderabad</p>
+                <button onclick="applyJob('Web Developer')">
+                    Apply Now
+                </button>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="job">
+                <h3>Java Developer</h3>
+                <p>Qualification: B.Tech / Degree</p>
+                <p>Skills: Java, Spring Boot, SQL</p>
+                <p>Location: Bengaluru</p>
+                <button onclick="applyJob('Java Developer')">
+                    Apply Now
+                </button>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="job">
+                <h3>Data Analyst</h3>
+                <p>Qualification: B.Tech / Degree</p>
+                <p>Skills: Python, SQL, Excel</p>
+                <p>Location: Chennai</p>
+                <button onclick="applyJob('Data Analyst')">
+                    Apply Now
+                </button>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="job">
+                <h3>Software Tester</h3>
+                <p>Qualification: B.Tech / Degree</p>
+                <p>Skills: Testing, SQL, Java</p>
+                <p>Location: Pune</p>
+                <button onclick="applyJob('Software Tester')">
+                    Apply Now
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section id="apply">
+        <h2>Apply for a Job</h2>
+
+        <form id="applicationForm">
+
+            <label for="name">Full Name:</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <label for="email">Email Address:</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="jobTitle">Job Title:</label>
+            <input
+                type="text"
+                id="jobTitle"
+                placeholder="Enter job title"
+                required
+            >
+
+            <label for="resume">Upload Resume:</label>
+            <input
+                type="file"
+                id="resume"
+                accept=".pdf,.doc,.docx"
+                required
+            >
+
+            <button type="submit">Submit Application</button>
+
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Smart Job Portal</p>
+        <p>Find Jobs. Build Your Career.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
